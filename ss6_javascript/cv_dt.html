@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<span>chiều dài</span><br>
+<label for="cd">chiều dài</label><br>
 <input id="cd"><br>
-<span>Chiều rộng</span><br>
+<label for="cr">Chiều rộng</label><br>
 <input id="cr">
 <p id="cvi"></p>
 <body>
-<button onclick="chuvi()">chu vi</button>
-<button onclick="dientich()">diện tích</button>
+<button onclick="chuVi()">chu vi</button>
+<button onclick="dienTich()">diện tích</button>
 <script>
-  function chuvi(){
-    let cd =+document.getElementById("cd").value
-      let cr =+document.getElementById("cr").value
-      let cv = (cd + cr)*2
-      // alert(cv)
-      document.getElementById("cvi").innerText="Kết quả là: "+cv
-  }
-  function dientich(){
-      let cd =+document.getElementById("cd").value
-      let cr =+document.getElementById("cr").value
-      let dt = cd * cr
-      // alert(dt)
-      document.getElementById("cvi").innerText="Kết quả là: "+dt
-  }
+    function chuVi() {
+        let chieuDai = +document.getElementById("cd").value;
+        let chieuRong = +document.getElementById("cr").value;
+        let chuVi = (chieuDai + chieuRong) * 2;
+        // alert(cv)
+        document.getElementById("cvi").innerText = "Kết quả là: " + chuVi;
+    }
+
+    function dienTich() {
+        let chieuDai = +document.getElementById("cd").value;
+        let chieuRong = +document.getElementById("cr").value;
+        let dienTich = chieuDai * chieuRong;
+        // alert(dt)
+        document.getElementById("cvi").innerText = "Kết quả là: " + dienTich;
+    }
 </script>
 </body>
 </html>
