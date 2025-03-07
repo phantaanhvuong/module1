@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<span>chiều dài</span><br>
+<input id="cd"><br>
+<span>Chiều rộng</span><br>
+<input id="cr">
+<p id="cvi"></p>
+<body>
+<button onclick="chuvi()">chu vi</button>
+<button onclick="dientich()">diện tích</button>
+<script>
+  function chuvi(){
+    let cd =+document.getElementById("cd").value
+      let cr =+document.getElementById("cr").value
+      let cv = (cd + cr)*2
+      // alert(cv)
+      document.getElementById("cvi").innerText="Kết quả là: "+cv
+  }
+  function dientich(){
+      let cd =+document.getElementById("cd").value
+      let cr =+document.getElementById("cr").value
+      let dt = cd * cr
+      // alert(dt)
+      document.getElementById("cvi").innerText="Kết quả là: "+dt
+  }
+</script>
+</body>
+</html>
