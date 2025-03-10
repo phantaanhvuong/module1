@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <b style="margin-left: 50px">Amount</b>
+    <b style="margin-left: 72px">From Currency</b>
+    <b style="margin-left: 22px">To Currency</b><br>
+    <input id="st">
+    <select style="margin-left: 28px" id="from">
+        <option value="23000">VNĐ</option>
+        <option value="1">USD</option>
+    </select>
+    <select style="margin-left: 76px" id="to">
+        <option value="23000">VNĐ</option>
+        <option value="1">USD</option>
+    </select>
+    <button onclick="doiTien()">Convert</button>
+    <p id="tv"></p>
+    <script>
+        function doiTien(){
+            let tienViet = +document.getElementById("st").value;
+            let to = +document.getElementById("to").value;
+            let from = +document.getElementById("from").value;
+            let result = to* tienViet / from;
+            document.getElementById("tv").innerText = result + "$";
+        }
+    </script>
+
+
+
+</body>
+</html>
