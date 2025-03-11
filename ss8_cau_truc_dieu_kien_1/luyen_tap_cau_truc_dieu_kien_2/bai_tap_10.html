@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kwh = +prompt("Nhập lượng điện tiêu thụ (kWh)");
+    if (kwh < 100 && kwh > 0) {
+        let tienDien = kwh * 2;
+        alert("đơn giá điện là : " + tienDien + "K");
+    } else if (kwh < 200) {
+        let tienThu = kwh * 2.5;
+        alert("đơn giá điện là : " + tienThu + "K");
+    } else {
+        let tienNha = kwh * 3;
+        alert("đơn giá điện là : " + tienNha + "k");
+    }
+</script>
+</body>
+</html>

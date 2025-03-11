@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap = +prompt("Thu nhập hằng tháng");
+    if (5000 <= thuNhap > 0) {
+        let tn = thuNhap * 5 / 100;
+        alert("số thuế phải nộp là :" + tn + "K");
+    } else if (thuNhap < 10000){
+        let tN = thuNhap * 10 / 100;
+        alert("số thuế phải nộp là :" + tN + "K");
+    }else if (thuNhap>=10000){
+        let tm = thuNhap * 20 / 100;
+        alert("số thuế phải nộp là :" + tm + "K");
+    }
+</script>
+</body>
+</html>

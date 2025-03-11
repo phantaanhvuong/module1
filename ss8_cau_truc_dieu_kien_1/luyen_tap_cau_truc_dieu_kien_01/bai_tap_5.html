@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiemTra = +prompt("Nhập điểm kiểm tra");
+    let giuaKy = +prompt("Nhâ điểm giữa kỳ");
+    let cuoiKy = +prompt("nhập điểm cuối kỳ");
+    let ketQua = (kiemTra + giuaKy*2 + cuoiKy*3)/6;
+    document.write("kết quả là " + ketQua);
+    if (ketQua>=8){
+        document.write("Loại giỏi");
+    }else if (ketQua>=7){
+        document.write("Loại khá");
+    }else if (ketQua>=5){
+        document.write("Loại trung bình");
+    }else {
+        document.write("loại kém");
+    }
+</script>
+</body>
+</html>

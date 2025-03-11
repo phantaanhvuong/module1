@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemChinh = +prompt("Điểm chính");
+    let soTrandachoi = +prompt("số trận đã chơi");
+    let soTranthang = +prompt("số trận thắng");
+    let tyleThang = (soTranthang / soTrandachoi) * 100;
+    if (soTrandachoi < 5) {
+        alert("Tân binh");
+    } else if (diemChinh < 1000 || tyleThang < 50) {
+        alert("Đồng");
+    } else if (diemChinh >= 1000 && diemChinh < 5000 && tyleThang >= 50) {
+        alert("Bạc");
+    } else if (diemChinh >= 5000 && diemChinh < 10000 && tyleThang >= 60) {
+        alert("Vàng")
+    } else if (diemChinh >= 10000 && tyleThang >= 70) {
+        alert("kim cương")
+    }
+</script>
+</body>
+</html>

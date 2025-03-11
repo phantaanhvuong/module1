@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soHang = +prompt("Số đơn đã bán");
+  if (soHang>=200){
+    let hoaHong = soHang * 50;
+    alert("số tiền hoa hồng là : " + hoaHong + "K");
+  }else if (soHang>=100){
+    let tienThem = soHang * 20;
+    alert("số tiền hoa hồng là : " + tienThem + "K");
+  }else {
+    let tienThua = soHang * 10;
+    alert("số tiền hoa hồng là : " + tienThua + "K");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<!--<input id="soA" placeholder="nhập a">-->
+<!--<input soB placeholder="nhập b">-->
+<!--<button onclick="ptb1">nghiệm của phương trình</button>-->
+<!--<b id="nghiem"</b>-->
+<!--<script>-->
+<!--    let a = document.getElementById("soA").value;-->
+<!--    let b = document.getElementById("soB").value;-->
+<!--    let x = document.getElementById(nghiem).-->
+
+<script>
+    let a = +prompt(" nhập số a");
+    let b = +prompt("nhập số b");
+    if (a == 0) {
+        if (b == 0) {
+            alert("phương trình vô số nghiêmh")
+        } else {
+            alert("phương trình vô nghiệm")
+        }
+    } else {
+        let x=-b/a;
+        alert("x" + x)
+    }
+
+</script>
+</body>
+</html>
