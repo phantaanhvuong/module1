@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+<input id="s1" type="text" placeholder="Nhập số thứ nhất">
+<input id="s2" type="text" placeholder="Nhập số thứ hai">
+<button type="button" onclick="cong()">Cộng</button>
+<button type="button" onclick="tru()">Trừ</button>
+<button type="button" onclick="nhan()">Nhân</button>
+<button type="button" onclick="chia()">Chia</button><br>
+<b id="tt"></b>
+<script>
+    function cong(){
+        let st1= +document.getElementById("s1").value;
+        let st2= +document.getElementById("s2").value;
+        let t2s= st1 + st2;
+        document.getElementById("tt").innerText = "kết quả là : " + t2s;
+    }
+    function tru(){
+        let st1= +document.getElementById("s1").value;
+        let st2= +document.getElementById("s2").value;
+        let h2s= st1 - st2;
+        document.getElementById("tt").innerText = "kết quả là : " + h2s;
+        ;
+    }
+ function nhan(){
+        let st1= +document.getElementById("s1").value;
+        let st2= +document.getElementById("s2").value;
+        let ti2s= st1 * st2;
+     document.getElementById("tt").innerText = "kết quả là : " + ti2s;
+    }
+ function chia(){
+        let st1= +document.getElementById("s1").value;
+        let st2= +document.getElementById("s2").value;
+        let th2s= st1 / st2;
+     document.getElementById("tt").innerText = "kết quả là : " + th2s;
+    }
 
+
+</script>
 </body>
 </html>
