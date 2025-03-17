@@ -7,9 +7,14 @@
 <body>
 <script>
     let thang = prompt("nhập tháng");
+    let nam = prompt("nhập năm")
     switch (thang) {
         case '2':
-            alert("Tháng có 28 hoặc 29 ngày")
+           if ((nam % 4 === 0 && nam % 100 !== 0) || (nam % 400 === 0)){
+            alert("tháng có 29 ngày")
+        }else{
+               alert("tháng có 28 ngày")
+        }
             break;
         case '1':
         case '3':

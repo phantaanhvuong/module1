@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [12, 34, 75, 22, 14, 8, 64, 83, 24, 102];
+    let max = arr[0];
+    let index = -1;
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            index = i
+        }
+    }
+    document.write("số lớn nhất là" + max + "vị trí của phần tử là" + index)
+</script>
+</body>
+</html>

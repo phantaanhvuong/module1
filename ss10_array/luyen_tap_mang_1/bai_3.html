@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("độ dài của mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ" + i);
+    }
+    let max = arr[0];
+    let sum = 0;
+
+    for (let i = 0; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        sum = sum + arr[i];
+    }
+    let avg = sum / arr.length;
+    alert("giá trị lớn nhất trong mảng là: " + max);
+    alert("trung bình các phần tử của mảng =" + avg
+    )
+
+
+    // let tb= arr[i]/n;
+    // document.write(tb)
+</script>
+
+</body>
+</html>

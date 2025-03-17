@@ -8,17 +8,10 @@
 <script>
     let soTien = + prompt("nhập số tiền vay");
     let soThang =+ prompt("nhập số tháng vay");
-    let laiXuat = +prompt("nhập lại xuất hàng tháng")
-    let laiKep = soTien*(1 + laiXuat)^soThang
-    // for (let i = 1; i <= 36; i++) {
-    //     // if (soThang<=12){
-    //     //     alert(laiXuat)
-    //     // }else {
-    //     //     laiXuat=laiXuat+laiXuat;
-    //     //     alert(laiXuat)
-    //     //     break
-    //     // }
-    alert(laiKep)
+    let laiXuat = +prompt("nhập lại xuất hàng tháng") / 100;
+    let laiKep = soTien* Math.pow(1 + laiXuat,soThang)    // for (let i = 1; i <= 36; i++) {
+
+    alert(laiKep.toFixed(0))
 
 </script>
 </body>

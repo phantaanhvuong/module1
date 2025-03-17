@@ -5,52 +5,96 @@
     <title>Title</title>
 </head>
 <body>
+<!--<script>-->
+<!--&lt;!&ndash;    for (let i = 1; i <= 5 ; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;        for (let j = 1; j <=5; j++) {&ndash;&gt;-->
+<!--&lt;!&ndash;            document.write("*");&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        document.write("<br>");&ndash;&gt;-->
+<!--&lt;!&ndash;    }document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    for (let i = 1; i <= 5 ; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;        for (let j = 1; j <=6-i; j++) {&ndash;&gt;-->
+<!--&lt;!&ndash;            document.write("*");&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        document.write("<br>");&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    // for (let i = 1; i <= 5 ; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;    //     for (let j = 1; j <=5; j++)&ndash;&gt;-->
+<!--&lt;!&ndash;    for (let i = 1; i <= 5 ; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;        for (let j = 1; j <= 5; j++) {&ndash;&gt;-->
+<!--&lt;!&ndash;            if (j<=5-i){&ndash;&gt;-->
+<!--&lt;!&ndash;                document.write("&nbsp;&nbsp;");&ndash;&gt;-->
+<!--&lt;!&ndash;            }else {&ndash;&gt;-->
+<!--&lt;!&ndash;                document.write("*");&ndash;&gt;-->
+<!--&lt;!&ndash;            }&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    }document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    for (let i = 1; i <=5; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;        for (let j = 1; j <=6-i; j++) {&ndash;&gt;-->
+<!--&lt;!&ndash;            document.write("*");&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    }document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    for (let i=1;i<=5;i++){&ndash;&gt;-->
+<!--&lt;!&ndash;        for (let j = 1; j <=5 ; j++) {&ndash;&gt;-->
+<!--&lt;!&ndash;            if (j<=6-i){&ndash;&gt;-->
+<!--&lt;!&ndash;                document.write("&nbsp;&nbsp;")&ndash;&gt;-->
+<!--&lt;!&ndash;            }else{&ndash;&gt;-->
+<!--&lt;!&ndash;                document.write("*")&ndash;&gt;-->
+<!--&lt;!&ndash;            }&ndash;&gt;-->
+<!--&lt;!&ndash;        }document.write("<br>")&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+
+
+
+
+
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--<script>-->
+<!--    import turtle-->
+
+<!--    def draw_heart():-->
+<!--    turtle.bgcolor("white")-->
+<!--    turtle.pensize(3)-->
+<!--    turtle.speed(5)-->
+<!--    turtle.color("red")-->
+
+<!--    turtle.begin_fill()-->
+<!--    turtle.left(140)-->
+<!--    turtle.forward(180)-->
+<!--    turtle.circle(-90, 200)-->
+<!--    turtle.left(120)-->
+<!--    turtle.circle(-90, 200)-->
+<!--    turtle.forward(180)-->
+<!--    turtle.end_fill()-->
+
+<!--    turtle.hideturtle()-->
+<!--    turtle.done()-->
+
+<!--    # Gọi hàm để vẽ trái tim-->
+<!--    draw_heart()-->
+<!--</script>-->
 <script>
-    for (let i = 1; i <= 5 ; i++) {
-        for (let j = 1; j <=5; j++) {
-            document.write("*");
-        }
-        document.write("<br>");
-    }document.write("<br>")
-    for (let i = 1; i <= 5 ; i++) {
-        for (let j = 1; j <=6-i; j++) {
-            document.write("*");
-        }
-        document.write("<br>");
-    }
-    // for (let i = 1; i <= 5 ; i++) {
-    //     for (let j = 1; j <=5; j++)
-    for (let i = 1; i <= 5 ; i++) {
-        for (let j = 1; j <= 5; j++) {
-            if (j<=5-i){
-                document.write("&nbsp;&nbsp;");
-            }else {
-                document.write("*");
+    function generateMultiplicationTable() {
+        let table = '<table border="1" cellspacing="0" cellpadding="5">';
+
+        for (let i = 1; i <= 9; i++) {
+            table += '<tr>';
+            for (let j = 1; j <= 9; j++) {
+                table += `<td>${i} × ${j} = ${i * j}</td>`;
             }
+            table += '</tr>';
         }
-        document.write("<br>")
-    }document.write("<br>")
-    for (let i = 1; i <=5; i++) {
-        for (let j = 1; j <=6-i; j++) {
-            document.write("*");
-        }
-        document.write("<br>")
-    }document.write("<br>")
-    for (let i=1;i<=5;i++){
-        for (let j = 1; j <=5 ; j++) {
-            if (j<=6-i){
-                document.write("&nbsp;&nbsp;")
-            }else{
-                document.write("*")
-            }
-        }document.write("<br>")
+
+        table += '</table>';
+        document.body.innerHTML = table;
     }
 
-
-
-
-
+    generateMultiplicationTable();
 
 </script>
+
 </body>
 </html>

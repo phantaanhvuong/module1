@@ -8,8 +8,23 @@
 <button onclick="choi()">bắt đầu</button>
 <script>
   function choi() {
-      let nhapSo = parseInt(prompt("Số bạn muốn bạn muốn đoán trong khoảng lơớn nhất là bao nhiêu"));
+      let nhapSo = parseInt(prompt("Số bạn muốn bạn muốn đoán trong khoảng lớn nhất là bao nhiêu"));
       let so=parseInt(prompt("so ban chon"));
+      let songauNhien = Math.floor(Math.random() * nhapSo);
+      alert(songauNhien)
+      for (let i = 0; i <=4 ; i++) {
+          if (i===3){
+              alert("bạn hêt lượt");
+              break;
+          }
+          if (songauNhien===so){
+              alert("bạn chọn đúng");
+          }else if (songauNhien<so){
+              alert("sộ bạn nhập lớn hơn");
+          }else {
+              alert("số bạn nhập bé hơn");
+          }
+      }
 
   }
 </script>
