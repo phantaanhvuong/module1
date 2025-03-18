@@ -6,20 +6,26 @@
 </head>
 <body>
 <script>
-    let a = [
+    let arr = [
         [1, 2, 1, 24],
         [8, 11, 9, 4],
         [7, 0, 7, 27],
         [7, 4, 28, 14],
         [3, 10, 26, 7]
     ];
-    let row = +prompt("nhập số hàng");
-    let col = +prompt("nhập số cột");
-    let arr = new Array(row);
+    // let row = +prompt("nhập số hàng");
+    // let col = +prompt("nhập số cột");
+    // let arr = new Array(row);
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = new Array(col);
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         arr[i][j] = +prompt(`nhập phần tử thứ : ${i}-${j}  `)
+    //     }
+    // }
     for (let i = 0; i < arr.length; i++) {
-        arr[i] = new Array(col);
+        document.write("row"+i+"<br>");
         for (let j = 0; j < arr[i].length; j++) {
-            arr[i][j] = +prompt(`nhập phần tử thứ : ${i}-${j}  `)
+            document.write(arr[i][j]+"<br>")
         }
     }
 </script>

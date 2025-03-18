@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("nhập phần tử số" + i);
+    }
+    // let index = -1;
+    for (let i = 0; i < arr.length; i++) {
+        // index = i;
+        if (arr[i]==="-"){
+            arr[i]= "_"
+        }
+    }
+    alert(arr);
+
+</script>
+</body>
+</html>
