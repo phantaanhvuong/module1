@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<script>
+    let tu = prompt("nhập từ cần tra");
+    let tiengAnh = ["play", "hello", "run", "go", "what"];
+    let tiengViet = ["chơi", "xin chào", "chạy", "đi", "cái gì"];
+    let index = tiengAnh.indexOf(tu);
+    // for (let i = 0; i < tiengAnh.length; i++) {
+    //     if (tiengAnh[i] === tu) {
+    //         index=i;
+    //         break;
+    //     }
+    // }
+    if (index!==-1){
+        alert(tiengViet[index]);
+    }else {
+        alert("không tìm thấy")
+    }
+</script>
+</body>
+</html>

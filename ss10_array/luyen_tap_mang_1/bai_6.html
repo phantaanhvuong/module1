@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let arr = [1,24,65,213,78,12,456,2,3,4];
+   let V = parseInt(prompt("nhập số nguyên V :"));
+   let i=0;
+   while (i<arr.length){
+       if (arr[i]===V){
+           alert("V is in the array");
+           break;
+       }
+       i++
+   }
+   if (i === arr.length){
+       alert("V is not in the array")
+   }
+</script>
+</body>
+</html>

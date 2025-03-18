@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let chuoi = prompt("nhập chuỗi");
+  let arr = chuoi.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]===arr[i].toLowerCase()){
+      arr[i]= arr[i].toUpperCase();
+    }else {
+      arr[i]= arr[i].toLowerCase();
+    }
+  }
+  alert(arr.join(""));
+
+</script>
+</body>
+</html>

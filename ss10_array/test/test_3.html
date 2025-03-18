@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0 || n >= 20) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần thử thứ " + i);
+    }
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (Math.sqrt(arr[i]) % 1 === 0) {
+            count++
+        }
+    }
+    alert(`tổng các phần tử là số chính phương là  ${count}
+    `)
+</script>
+</body>
+</html>

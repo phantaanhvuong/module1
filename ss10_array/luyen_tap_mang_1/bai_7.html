@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr= [13,4,9,5,67,2,12,34,14,56]
+    let V = parseInt(prompt("Nhập số nguyên V"));
+    let index = -1
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]===V){
+            index=i;
+            break;
+        }
+    }
+    if (index!==-1) {
+        for (let i = index; i < arr.length; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length-1]=0
+    }
+
+    alert(arr);
+
+</script>
+</body>
+</html>
