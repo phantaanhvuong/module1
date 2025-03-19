@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert(kiemTra())
+    function kiemTra() {
+        let n = +prompt("nhập độ dài mảng");
+        while (n < 0) {
+            n = +prompt("nhập lại");
+        }
+        arr = new Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt("nhập ký tự thứ " + i)
+        }
+        return arr;
+        // let nhap = +prompt("nhâp một ký tự bất kỳ ");
+        // let count = 0;
+        // let index = -1;
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (nhap === arr[i]) {
+        //         index = i;
+        //         count++
+        //     }
+        //
+        // }
+        // return count
+        // if (nhap !== arr[index]) {
+        //     return -1;
+        // }
+
+
+    }
+    let nhap = +prompt("nhâp một ký tự bất kỳ ");
+    let count = 0;
+    let index = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (nhap === arr[i]) {
+            index = i;
+            count++
+        }
+
+    }
+    alert(count);
+    if (nhap !== arr[index]) {
+        alert(-1);
+    }
+
+
+</script>
+</body>
+</html>

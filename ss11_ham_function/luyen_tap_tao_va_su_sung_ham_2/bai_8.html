@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoNguoc() {
+        let n = +prompt("nhập độ dài mảng");
+        while (n < 0) {
+            n = +prompt("nhập lại");
+        }
+        let arr = new Array(n)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt("nhập số nguyên thứ" + i)
+        }
+        arr.reverse();
+        return arr
+    }
+
+    alert(daoNguoc())
+</script>
+</body>
+</html>
