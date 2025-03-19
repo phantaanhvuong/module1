@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="timKiem()">
+<!--&lt;!&ndash;<button onclick="prompt('nhập tên sao')">nhập sao</button>&ndash;&gt;-->
+<!--<button onclick="timKiem()">tương ứng</button>-->
+<script>
+    let nhapSao = prompt("nhập tên sao")
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let index = ngoiSao.indexOf(nhapSao)
+
+    function timKiem() {
+        if (index !== 1) {
+            document.write(chomSao[index])
+        } else {
+            document.write(`không tìm thấy sao`)
+        }
+    }
+</script>
+</body>
+</html>

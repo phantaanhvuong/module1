@@ -6,17 +6,13 @@
 </head>
 <body>
 <script>
-    let n = +prompt("nhập độ dài mảng");
-    while (n<0){
-        n = +prompt("nhập lại")
-    }
-    let arr = new Array(n)
+    let chuoi = prompt("nhập chuỗi");
+    let arr = chuoi.split(" ");
+    let count = 0;
     for (let i = 0; i < arr.length; i++) {
-        arr[i]=+prompt("nhập phần tử số "+ i);
-    }
-    let count= 0;
-    for (let i = 0; i < arr.length; i++) {
-        count++
+        if (arr[i]!==""){
+            count++;
+        }
     }
     alert(count);
 </script>

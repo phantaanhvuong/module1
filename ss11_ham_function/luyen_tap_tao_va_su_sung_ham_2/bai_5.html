@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập số nguyên thứ nhất");
+    let b = +prompt("nhập số nguyên thứ hai");
+    let c = +prompt("nhập số nguyên thứ ba");
+
+    function timMin() {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+
+    alert(`số nhỏ nhất là ${timMin()}`)
+</script>
+</body>
+</html>

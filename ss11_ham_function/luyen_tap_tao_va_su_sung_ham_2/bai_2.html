@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let banKinh = +prompt("nhập bán kính hình tròn");
+    let pi = 3.14;
+
+    function tinhDienTich() {
+        let dienTich = banKinh * banKinh * pi;
+        return dienTich;
+    }
+
+    function tinhChuVi() {
+        let chuVi = 2 * banKinh * pi;
+        return chuVi;
+    }
+
+    alert(`diện tích hình tròn là ${tinhDienTich()}`)
+    alert(`chu vi hình tròn là ${tinhChuVi()}`)
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("độ dài của mảng");
+    while (n < 0 || n > 20) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử số" + i);
+    }
+    let khoangCach = arr[1] - arr[0];
+    let check = true;
+    for (let i = 0; i < arr.length-1; i++) {
+        if (arr[i + 1] - arr[i] !== khoangCach) {
+            check = false;
+            break;
+        }
+    }
+    if (check) {
+        alert("ok")
+    } else {
+        alert("no");
+    }
+
+</script>
+</body>
+</html>
