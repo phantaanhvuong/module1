@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(arr) {
+        let countChan = 0;
+        let countLe = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                countChan++;
+            } else {
+                countLe++;
+            }
+            if (countChan === arr.length) {
+                return 1;
+            }
+            if (countLe === arr.length) {
+                return 0;
+            }
+            if (countChan !== arr.length && countLe !== arr.length) {
+                return -1;
+            }
+
+
+        }
+    }
+
+    let mang = [0, 2, 4, 9, 6];
+    alert(kiemTra(mang))
+
+</script>
+
+
+</body>
+</html>

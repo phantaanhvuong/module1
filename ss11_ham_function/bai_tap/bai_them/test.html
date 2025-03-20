@@ -33,34 +33,29 @@
     }
 
     function showList() {
-        let str = "danh sách sinh viên \n";
+        let str = "Danh sách sinh viên \n";
         for (let i = 0; i < hocSinh.length; i++) {
             str += (i + 1) + "." + hocSinh[i] + "\n";
         }
         alert(str);
-
     }
-
-
-    function addHocSinh() {
-        let name = prompt("nhâp tên sihh viên");
-        hocSinh.push(name)
-        showList();
+    function addHocSinh(){
+        let name = prompt("Nhập tên sinh viên");
+        hocSinh.push(name);
+        showList()
     }
-
-    function deleteHocsinh() {
-        let str = "danh sách sinh viên \n";
+    function deleteHocsinh(){
+        let str = "Danh sách sinh viên \n";
         for (let i = 0; i < hocSinh.length; i++) {
             str += (i + 1) + "." + hocSinh[i] + "\n";
         }
-        let xoa = prompt(str + "bạn muốn xoá sinh viên nào ");
-        if (xoa) {
-            hocSinh.splice(xoa - 1, 1);
+        let xoa = prompt(str+"bạn muốn xoá sinh viên nào ");
+        if(xoa){
+            hocSinh.splice(xoa-1,1)
         }
-        showList();
-
-
+        showList()
     }
+
 </script>
 </body>
 </html>

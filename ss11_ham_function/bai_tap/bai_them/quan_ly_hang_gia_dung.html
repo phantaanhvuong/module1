@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input placeholder="New Product">
+<button onclick="">Add</button>
+<h2>Display All Product</h2>
+<table border="1" >
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+</table>
+<script>
+    let hang = ["Sony Xperia", "Samsung Galaxy", "Nokia 6",
+        "Xiaomi Redmi Note 4", "Apple iphone 6S", "Xiaomi Mi 5s Plus",
+        "Apple iphone 8 Plus", "Fujitsu F-04E", "Oppo A71"
+    ];
+    function display(list){
+        let table = `<table border="1">
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>`;
+        for (let i = 0; i < list.length; i++) {
+            table += `<tr>
+                        <td>${i+1}</td>
+                        <td>${list[i]}</td>
+                        <td></td>
+                        <td></td>
+                        </tr>`
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

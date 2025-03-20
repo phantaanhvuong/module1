@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let hocSinh = ["vuong", "huy", "nam"];
+  while (true) {
+    let quanLy = prompt("Quản lý sinh viên\n" +
+            "Hãy nhập số để chọn đồ uống\n" +
+            "1. Hiển thị danh sách sinh viên\n" +
+            "2. Thêm mới sinh viên\n" +
+            "3. Xoá sinh viên\n" +
+            "4. kết thúc chương trình");
+    switch (quanLy) {
+      case "1":
+        showList()
+        break;
+      case "2":
+        addHocSinh()
+        break;
+      case "3":
+        deleteHocsinh()
+        break;
+      case "4":
+        confirm("Kết thúc chương trình");
+    }
+    if (quanLy === "4") {
+      break;
+    }
+  }
+
+  function showList() {
+    let str = "danh sách sinh viên \n";
+    for (let i = 0; i < hocSinh.length; i++) {
+      str += (i + 1) + "." + hocSinh[i] + "\n";
+    }
+    alert(str);
+
+  }
+
+
+  function addHocSinh() {
+    let name = prompt("nhâp tên sihh viên");
+    hocSinh.push(name)
+    showList();
+  }
+
+  function deleteHocsinh() {
+    let str = "danh sách sinh viên \n";
+    for (let i = 0; i < hocSinh.length; i++) {
+      str += (i + 1) + "." + hocSinh[i] + "\n";
+    }
+    let xoa = prompt(str + "bạn muốn xoá sinh viên nào ");
+    if (xoa) {
+      hocSinh.splice(xoa - 1, 1);
+    }
+    showList();
+
+
+  }
+</script>
+</body>
+</html>
