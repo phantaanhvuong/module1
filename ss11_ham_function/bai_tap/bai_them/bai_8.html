@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuyenHoaChuoi(chuoi) {
+        let chuoi1 = chuoi.toLowerCase();
+        let arr = chuoi1.split(" ");
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== "") {
+                arr1.push(arr[i]);
+            }
+        }
+        alert(arr1);
+        for (let i = 0; i < arr1.length; i++) {
+            arr1[i] = arr1[i].split("");
+            arr1[i][0] = arr1[i][0].toUpperCase();
+            arr1[i] = arr1[i].join("")
+        }
+        return arr1.join(" ")
+    }
+
+    alert(chuyenHoaChuoi("truOng  TAN  HAi"))
+</script>
+</body>
+</html>

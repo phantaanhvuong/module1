@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--nhập mảng với độ dài n
+hiển thị mảng sau khi thêm các phần tử
+Đếm số lượng số có giá trị bằng giá trinh trung bình của mảng.
+Ví dụ [1,2,2,3,3,5,4,4] => số lượng số bằng với giá trị trung bình của các phần tử trong mảng!-->
+<script>
+    let n = +prompt("nhập độ dài mảng ");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    alert(arr);
+    let tong = 0;
+    for (let i = 0; i < arr.length; i++) {
+        tong += arr[i]
+    }
+    let trungBinh = tong / arr.length;
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === trungBinh) {
+            count++;
+        }
+    }
+    alert(count);
+</script>
+</body>
+</html>

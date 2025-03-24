@@ -7,20 +7,30 @@
 <body>
 <script>
     let n = +prompt("nhập độ dài mảng");
-    while (n < 0 || n >= 20) {
+    while (n < 0 || n % 2 !== 0) {
         n = +prompt("nhập lại");
     }
-    let arr = new Array(n)
+    let arr = new Array(n);
     for (let i = 0; i < arr.length; i++) {
-        arr[i] = +prompt("nhập phần thử thứ " + i);
+        arr[i] = +prompt("nhập phần tử thứ " + i);
     }
+    alert(arr);
     let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (Math.sqrt(arr[i]) % 1 === 0) {
+    for (let i = 0; i < arr.length; i+=2) {
+
+        if (arr[i] < arr[i + 1]) {
             count++
         }
+
+
     }
-    alert(`tổng các phần tử là số chính phương là  ${count}`)
+    if (count === arr.length/2) {
+        alert("OK");
+    }else {
+        alert("NO");
+    }
+
+
 </script>
 </body>
 </html>

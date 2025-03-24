@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập 1 mảng từ bàn phím với độ dài n (với n là số chẵn)-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Kiểm tra mảng vừa nhập. Nếu các cặp phần ở liền kề nhau (phần tử thứ nhất <phần tử thứ 2) thì hiện thị thông báo "OK",-->
+<!--nếu không thoả mãn thì hiện thị "NO-->
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + i)
+    }
+    alert(arr);
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < arr[i + 1]) {
+            count++;
+        }
+    }
+    if (count === n - 1) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+</script>
+</body>
+</html>

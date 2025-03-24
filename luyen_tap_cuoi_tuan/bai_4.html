@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 4 Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))-->
+<!--thực hiện kiểm tra nêu kí tự in thường bằng kí ự in hoa thì trả về true ngược lại trả về false-->
+<script>
+    function checkString(str) {
+        arr = str.split(" ");
+        let inHoa=0;
+        let inThuong=0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]===arr[i].toUpperCase()){
+                inHoa++
+            }
+            if (arr[i]===arr[i].toLowerCase()){
+                inThuong++
+            }
+
+        }
+        if (inThuong===inHoa){
+            return true;
+        }else {
+           return false;
+        }
+    }
+    alert(checkString("FYYIGUGbshjbw"))
+</script>
+</body>
+</html>

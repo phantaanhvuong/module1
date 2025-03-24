@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài tập 12	Viết hàm truyền vào tham số là một chuỗi.. checkDate(dateString)-->
+<!--Kiểm tra xem chuối nhập vào dateString có phải là định dạng của ngày tháng năm hay không ( dd/mm/yyyy)-->
+<!--Nếu đúng return true, sai return false-->
+<script>
+    function checkDate(dateString){
+        let arr = dateString.split('/');
+        if (arr.length !==3) {
+            return false;
+        }//nếu hơn 3 phần tử thì không phải
+       let [ngay, thang, nam]= arr;
+        if (isNaN(ngay) || isNaN(thang) || isNaN(nam)){
+            return false;
+        }//kiem tra nếu là chữ thì trả false vội
+        if (ngay.length !== 2 || thang.length !== 2 || nam.length !== 4){
+            return false;
+        }//kiểm tra ngày tháng năm mà sai ví dụ ngày333
+        return true;
+    }
+    alert(checkDate("16/10/2025"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--khai báo  1 mảng số nguyên từ bàn phím với độ dài n.-->
+<!--Nhập các phần tử cho  mảng với  một số nguyên lớn hơn 10 và nhỏ hơn 100.-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Viết chương trình hiện thị các phần tử của mảng có hàng đơn vị lớp hơn hàng chục ví dụ: [11, 12, 21 , 56, 19] => kết quả hiện thị ra 12,56,19-->
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ" + i);
+        while (arr[i] <= 10 || arr[i] >= 100) {
+            arr[i] = +prompt("nhập lại phần tử thứ" + i);
+        }
+    }
+    alert(arr);
+    let ketQua = "";
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        let hangChuc = Math.floor(num / 10);//làm tròn để lấy hàng chục ví dụ 24/10=2.4 nhưng Math.floor sẽ thành =2
+        let hangDonVi = num % 10;//ví dụ 24%10=4 sẽ lấy được hàng đơn vị
+        if (hangDonVi > hangChuc) {
+            ketQua += num + ",";
+        }
+    }
+    if (ketQua.length > 0) {
+        alert(ketQua);
+    } else {
+        alert("không cóp số nào thoả mãn đk");
+    }
+
+
+</script>
+</body>
+</html>

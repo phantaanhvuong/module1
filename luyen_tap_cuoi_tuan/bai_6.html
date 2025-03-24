@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 6 Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))-->
+<!--Hàm trả về mảng các ký tự là nguyên âm có trong mảng-->
+<script>
+  let nguyenAm = ["u","e","o","a","i"];
+  function checkString(str) {
+    arr = str.split("");
+    let mangMoi = []
+    for (let i = 0; i < arr.length; i++) {
+      if (nguyenAm.includes(arr[i])){
+        mangMoi.push(arr[i])
+      }
+    }
+    return mangMoi
+  }
+  alert(checkString("phantaanhvuong"));
+</script>
+</body>
+</html>

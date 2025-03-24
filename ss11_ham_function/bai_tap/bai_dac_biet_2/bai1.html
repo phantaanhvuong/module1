@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = +prompt("nhập độ dài mảng");
+  while (n<0){
+    n = +prompt("nhập lại");
+  }
+  let arr = new Array(n);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i]= +prompt("nhập phần tử thứ "+ [i]);
+  }
+  alert(arr);
+  // let sum = 0;
+  // for (let j = 0; j <= Math.sqrt(arr[i]); j++) {
+  //   if (arr[i]%j===0){
+  //     sum += j;
+  //   }
+  //   let uoc = arr[i]/j;
+  //   if (i!==uoc){
+  //     sum +=uoc;
+  //   }
+  // }
+  // for (let i = 0; i < arr.length; i++) {
+  //
+  // }
+  function kiemTra(arr) {
+    let array2 = [];
+    for (let i = 0; i < arr.length; i++) {
+      array2.push(sumUoc(arr[i]));
+    }
+    return array2;
+
+  }
+
+  function sumUoc(n) {
+    let sum = 0;
+    for (let j = 1; j <= n; j++) {
+      if (n % j === 0) {
+        sum += j;
+      }
+    }
+    return sum;
+  }
+
+  alert(kiemTra(arr));
+</script>
+</body>
+</html>

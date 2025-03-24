@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [3,9,10,10,5];
+    function kiemTra(str) {
+        let count = 0;
+        let count1 = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] % 3 === 0) {
+                count++;
+            }
+            if (str[i] % 5 === 0) {
+                count1++;
+            }
+
+        }
+        if (count === count1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert(kiemTra(arr))
+</script>
+</body>
+</html>
