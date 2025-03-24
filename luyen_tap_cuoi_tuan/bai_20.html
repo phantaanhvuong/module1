@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 20	Nhập 1 mảng số từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Tính tổng các phần tử tử chẵn và ở vị trí lẻ-->
+<script>
+  let n = + prompt("nhập độ dài mảng");
+  while (n<0){
+    n = +prompt("nhập lại");
+  }
+  let arr = new Array(n);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = + prompt("nhập phần tử thứ " + i);
+  }
+  alert(arr);
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i%2!==0){
+      if (arr[i]%2===0){
+        sum +=arr[i]
+      }
+    }
+  }
+  alert(sum);
+</script>
+
+</body>
+</html>

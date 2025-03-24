@@ -10,12 +10,26 @@
 <!--"Nếu chuỗi chỉ có 1 từ thì trả về từ đó . Ví dụ   : ""Hello"" => ""Hello""-->
 <!--Nếu chuỗi từ 2 từ trở lên thì trả về chuỗi gồm các ký tự đầu tiên của một từ. Ví dụ:" Object Oriented Programming" => OOP-->
 <script>
-    function checkString(str){
+    function checkString(str) {
         arr = str.split(" ");
+        arr2 = [];
         for (let i = 0; i < arr.length; i++) {
-            if ()
+            if (!isNaN(arr[i])) {
+                return false;
+            }
+            if (arr.length === 1) {
+                return arr;
+            } else {
+                arr[i] = arr[i].split("")
+                arr2.push(arr[i][0])
+            }
+
         }
+        return arr2.join("")
+
     }
+    alert(checkString("Object Oriented Programming"))
+
 </script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 18	Nhập 1 mảng số từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Kiểm tra mảng vừa nhập. Nếu tất cả các phần tử trong mảng đều là số nguyên tố  thì hiện thị thông báo "OK", nếu không thoả mãn thì hiện thị "NO"-->
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại ");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`nhập phần tử thứ ${i}`);
+    }
+    alert(arr);
+
+    function isPrime(num) {
+        if (num < 2) {
+            return false;
+        }
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true
+    }
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i])){
+            count++;
+        }
+    }
+    if (count===arr.length){
+        alert("OK")
+    }else {
+        alert("NO")
+    }
+</script>
+</body>
+</html>
