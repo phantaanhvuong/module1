@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.-->
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function demSoNguyenTo(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (isPrime(arr[i][j])) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    let arr2 = [
+        [1, 2, 43, 66, 4, 7, 9],
+        [3, 5, 8, 66, 4, 12, 4]
+    ];
+    alert(demSoNguyenTo(arr2));
+</script>
+</body>
+</html>

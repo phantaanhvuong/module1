@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<<!--Bài 2: Cho xâu kí tự. Hãy tìm ra chuỗi con liên tiếp tăng dần có độ dài lớn nhất-->
+<!--Ví dụ: s = "abefaefghedcb", thì kết quả getMaxChildString (s)   “aefgh”-->
+<!--⇨	aefgh : là chuỗi con liên tiếp trong chuỗi cha có độ dài lớp nhất.-->
+<script>
+    function getMaxChidString(str) {
+        let arr = str.split("")
+        let mang1 = [];
+        let mang2 = [];
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] < arr[i + 1]) {
+                mang1.splice(mang1.length - 1, 1, arr[i], arr[i + 1]);
+            } else {
+                if (mang2.length < mang1.length) {
+                    mang2 = mang1;
+                }
+                mang1 = [];
+            }
+            if (mang2.length < mang1.length) {
+                mang2 = mang1;
+            }
+
+        }
+        return mang2.join("")
+    }
+
+    alert(getMaxChidString("abefaefghedcb"))
+</script>
+</body>
+</html>

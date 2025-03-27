@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapTien = prompt("nhập số tiền đã chi tiêu")
+    let ketQua = getcustomerRank(nhapTien)
+
+    function getcustomerRank(spentAmount) {
+        if (spentAmount < 100) {
+            return {
+                rank: "Bronze",
+                discount: false,
+                freeShipping: false,
+                gift: false
+            }
+        } else if (spentAmount < 500) {
+            return {
+                rank: "Silver",
+                discount: "5%",
+                freeShipping: false,
+                gift: false
+            }
+        } else if (spentAmount < 1000) {
+            return {
+                rank: "Gold",
+                discount: "10%",
+                freeShipping: "miễn phí giao hàng",
+                gift: false
+            }
+        } else {
+            return {
+                rank: "Platinum",
+                discount: "20%",
+                freeShipping: "miễn phí giao hàng",
+                gift: "quà tặng VIP"
+            }
+        }
+    }
+
+    alert(`${ketQua.rank},${ketQua.discount},${ketQua.freeShipping},${ketQua.gift}`)
+</script>
+</body>
+</html>

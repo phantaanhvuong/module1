@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 24	Nhập 1 mảng số từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Hiện thị một mảng mới ( mảng mới là 1 mảng mà mỗi phần tử là tổng các ước của mỗi phần tử của mảng cũ-->
+<!--Ví dụ: [2,4,7,9,1] => [3,7,8,13,1]-->
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    alert(arr);
+
+    function kiemTra(arr) {
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+            arr2.push(sumUoc(arr[i]));
+        }
+        return arr2;
+    }
+
+    function sumUoc(n) {
+        let sum = 0;
+        for (let j = 0; j <= n; j++) {
+            if (n % j === 0) {
+                sum += j;
+            }
+        }
+        return sum;
+    }
+
+    alert(kiemTra(arr))
+
+</script>
+</body>
+</html>

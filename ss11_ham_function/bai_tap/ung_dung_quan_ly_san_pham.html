@@ -18,29 +18,6 @@
         "Apple iphone 8 Plus", "Fujitsu F-04E", "Oppo A71"
     ];
     display(hang, "result1");
-
-    function addProduct() {
-        let newProduct = document.getElementById("product").value;
-        if (newProduct !== "") {
-            hang.push(newProduct);
-        } else {
-            alert("yêu cầu nhập")
-        }
-
-        display(hang);
-        document.getElementById("product")
-    }
-
-    function deleteProduct(index) {
-        let conf = confirm("bạn có muốn xoá hàng này : " + hang[index] + "?");
-        if (conf) {
-            hang.splice(index, 1);
-        }
-
-        display(hang);
-    }
-
-
     function display(list) {
         let tableString = `<table border="1" style="border-collapse:collapse">
                         <tr>
@@ -63,8 +40,32 @@
         document.getElementById("soLuong").innerHTML = hang.length;
     }
 
+    function addProduct() {
+        let newProduct = document.getElementById("product").value;
+        if (newProduct !== "") {
+            hang.push(newProduct);
+        } else {
+            alert("yêu cầu nhập");
+        }
+
+        display(hang);
+        document.getElementById("product")
+    }
+
+    function deleteProduct(index) {
+        let conf = confirm("bạn có muốn xoá hàng này : " + hang[index] + "?");
+        if (conf) {
+            hang.splice(index, 1);
+        }
+
+        display(hang);
+    }
+
+
+
+
     function editProduct(index) {
-        let editProduct = prompt(hang[index] + "nhập vào tên cần sửa");
+        editProduct = prompt(hang[index] + "nhập vào tên cần sửa");
         hang[index] = editProduct;
         display(hang);
     }

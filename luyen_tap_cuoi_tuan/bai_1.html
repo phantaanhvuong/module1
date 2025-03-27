@@ -5,33 +5,38 @@
     <title>Title</title>
 </head>
 <body>
-<!--//Nhập 1 mảng từ bàn phím với độ dài n-->
-<!--Hiện thị mảng sau khi thêm mới các phần tử-->
-<!--Kiểm tra mảng vừa nhập. Nếu số phần tử chẵn bằng số phần tử lẻ thì hiện thị-->
 <script>
-    let n = +prompt("nhập độ dài mảng ");
+    let n = +prompt("nhập độ dài mảng");
     while (n < 0) {
-        n = +prompt("nhập lại ");
+        n = +prompt("nhập lại");
     }
     let arr = new Array(n);
     for (let i = 0; i < arr.length; i++) {
         arr[i] = +prompt("nhập phần tử thứ " + i);
     }
     alert(arr);
-    let count = 0;
-    let count2 = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            count++;
-        } else {
-            count2++;
+
+    function kiemTra(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum += array[i]
         }
+        let trungBinh = sum / array.length;
+        let min = array[0];
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] < array[0]) {
+                min = array[i];
+            } else {
+                max = array[i];
+            }
+        }
+        if (min % trungBinh === 0 && max % trungBinh === 0) {
+            return true;
+        }
+        return false
     }
-    if (count === count2) {
-        alert(true);
-    } else {
-        alert(false);
-    }
+    alert(kiemTra(arr));
 </script>
 </body>
 </html>

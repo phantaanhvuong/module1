@@ -10,10 +10,14 @@
 <!--Ví dụ: changeBinary(2) => "10"-->
 <script>
     function changeBinary(num) {
-        if (num < 0) return " ";
-        return num.toString(2);
+        let arr = [];
+       while (num>0){
+           arr.push(num%2);
+           num=parseInt(num/2);
+       }
+       return arr.reverse().join("")
     }
-    alert(changeBinary(0))
+    alert(changeBinary(10));
 </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 25	Nhập 1 mảng số từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Kiểm tra mảng vừa nhập. Nếu các phần tử phía trước của mỗi phần tử đều là ước của nó thì hiện thị OK, không phải thì trả về NO-->
+<!--Ví dụ: [1,2,6,12,48] =>OK( vì 1 là ước của 2  và  1,2 là ước của 6  và  1,2,6 là ước của 12 và 1,2,6,12 là ước của 48)-->
+<!--Ví dụ: [1,2,6,13,48] =>NO ( vì 6 không phải là ước 13)-->
+<script>
+    let n = +prompt("nhập độ dài mảng ");
+    while (n < 0) {
+        n = +prompt("nhập lại");
+    }
+  let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i]= +prompt("nhập phần tử thứ "+i)
+    }
+    alert(arr);
+    function uocSo() {
+        
+    }
+</script>
+</body>
+</html>

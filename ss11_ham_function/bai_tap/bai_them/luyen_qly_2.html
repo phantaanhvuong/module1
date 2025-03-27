@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Shop Trái cây</h2>
+<input id="traicay" placeholder="thêm trái cây">
+<button onclick="addTraiCay()">Thêm</button>
+<h2>Giang hàng gồm có</h2>
+<h5>Tên trái cây</h5>
+<span>Số lượng</span><span id="soLuongQua"></span>
+<div id="result"></div>
+<script>
+    let qua = ["Cam", "Mận", "Ổi", "Quít", "Xoài"]
+    display(qua)
+
+    function display(list) {
+        let table = `<table border="1" style="border-collapse: collapse">
+                      <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Chỉnh sửa</th>
+                        <th>Xoá</th>
+                      </tr>`;
+        for (let i = 0; i < list.length; i++) {
+            table += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${list[i]}</td>
+                    <td><button onclick="chinhSuaQua(${i})">Chỉnh sửa</button></td>
+                    <td><button onclick="xoaQua(${i})">Xoá</button></td>
+                  </tr>`;
+        }
+        table += `</table>`;
+        document.getElementById("result").innerHTML = table
+    }
+
+    function addTraiCay() {
+        let quaMoi = document.getElementById("traicay").value;
+        if (quaMoi !== "") {
+            qua.push(quaMoi);
+        } else {
+            alert("yêu cầu nhập lại");
+        }
+        display(qua);
+        document.getElementById("traicay");
+    }
+
+    function chinhSuaQua(index) {
+        let chinhSua = prompt(qua[index] + "nhập vào quả cần sửa");
+        qua[index] = chinhSua;
+        display(qua);
+    }
+
+    function xoaQua(index) {
+        let conf = confirm("bạn có muốn xoá quả này " + qua[index] + "?");
+        if (conf) {
+            qua.splice(index, 1);
+        }
+        display(qua);
+    }
+</script>
+</body>
+</html>

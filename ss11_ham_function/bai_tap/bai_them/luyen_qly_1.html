@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input id="product" placeholder="New Product">
+<button onclick="addProduct()">Add</button>
+<h2>Display All Product</h2>
+<h5>Product name</h5>
+<span>Số lượng </span><span id="so luong"></span>
+<div id="result"></div>
+
+
+<script>
+    let hang = ["Sony Xperia", "Samsung Galaxy", "Nokia 6",
+        "Xiaomi Redmi Note 4", "Apple iphone 6S", "Xiaomi Mi 5s Plus",
+        "Apple iphone 8 Plus", "Fujitsu F-04E", "Oppo A71"
+    ];
+    display(hang)
+
+    function display(list) {
+        let table = `<table border="1" style="border-collapse: collapse">
+                  <tr>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>`;
+        for (let i = 0; i < list.length; i++) {
+            table += `<tr>
+                  <td>${i+1}</td>
+                  <td>${list[i]}</td>
+                  <td><button onclick="editProduct(${i})">Edit</button></td>
+                  <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                </tr>`
+        }
+        table += `</table>`;
+        document.getElementById("result").innerHTML = table;
+        document.getElementById("so luong").innerHTML = hang.length;
+    }
+    function addProduct() {
+        let newProduct = document.getElementById("product").value;
+        if (newProduct!==""){
+            hang.push(newProduct);
+        }else {
+            alert("yêu cầu nhập");
+        }
+        display(hang);
+        document.getElementById("product")
+    }
+    function deleteProduct(index){
+        let conf = confirm("bạn có muốn xoá hàng này :"+ hang[index]);
+        if (conf){
+            hang.splice(index,1);
+        }
+        display(hang);
+    }
+    function editProduct(index){
+        editProduct= prompt(hang[index]+"nhập tên cần sữa");
+        hang[index]= editProduct;
+        display(hang);
+    }
+
+
+</script>
+</body>
+</html>
