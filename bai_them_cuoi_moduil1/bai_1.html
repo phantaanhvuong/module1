@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (n < 0 && n > 50) {
+        n = +prompt("nhập lại");
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    alert(arr);
+    let sumchan = 0;
+    let sumle = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            sumchan += arr[i];
+        } else {
+            sumle += arr[i];
+        }
+    }
+    alert(sumchan - sumle);
+</script>
+</body>
+</html>

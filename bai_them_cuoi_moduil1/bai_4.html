@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mayTinh {
+        constructor(maMay, tenMay, tenHangSanXuat, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHangSanXuat = tenHangSanXuat;
+            this.giaBan = giaBan;
+        }
+
+        setMayTinh(maMay, tenMay, tenHangSanXuat, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHangSanXuat = tenHangSanXuat;
+            this.giaBan = giaBan;
+        }
+
+        toString() {
+            return `mã máy :${this.maMay}\n
+tên máy :${this.tenMay}\n
+tên hãng sản xuất :${this.tenHangSanXuat}\n
+giá bán :${this.giaBan}`
+        }
+    }
+    let mayTinh1 = new mayTinh(7228, 344223, 32422, 4245);
+    mayTinh1.setMayTinh(1212, "DELL", "CHINA", 5000 + "$");
+    alert(mayTinh1.toString());
+</script>
+</body>
+</html>
